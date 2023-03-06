@@ -7,7 +7,7 @@ import ProductList from "./components/ProductList/ProductList";
 import Form from "./components/Form/Form";
 
 const App = () => {
-  const { onToggleButton, tg } = useTelegram();
+  const { tg } = useTelegram();
 
   useEffect(() => {
       tg.ready();
@@ -19,7 +19,6 @@ const App = () => {
       <Routes>
         <Route index element={<ProductList />} />
         <Route path={'form'} element={<Form />} />
-
       </Routes>
     </div>
   );
